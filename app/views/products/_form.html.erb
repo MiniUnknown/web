@@ -1,37 +1,46 @@
-<div class="custom-body">
-  <div class="form-container">
-    <h2 class="form-title">Product Form</h2>
-    <%= form_with model: product do |form| %>
-      
-      <!-- Name Field -->
-      <div class="form-group">
-        <%= form.label :name, class: "form-label" %>
-        <%= form.text_field :name, class: "form-input" %>
-      </div>
-
-      <!-- Description Field -->
-      <div class="form-group">
-        <%= form.label :description, class: "form-label" %>
-        <%= form.rich_text_area :description, class: "form-textarea" %>
-      </div>
-
-      <!-- Featured Image Field -->
-      <div class="form-group">
-        <%= form.label :featured_image, class: "form-label" %>
-        <%= form.file_field :featured_image, accept: "image/*", class: "form-file-input" %>
-      </div>
-
-      <!-- Inventory Count Field -->
-      <div class="form-group">
-        <%= form.label :inventory_count, class: "form-label" %>
-        <%= form.number_field :inventory_count, class: "form-input" %>
-      </div>
-
-      <!-- Submit and Cancel Buttons -->
-      <div class="form-actions">
-        <%= form.submit "Save Product", class: "form-submit" %>
-        <%= link_to "Cancel", @product, class: "cancel-link" %>
-      </div>
-    <% end %>
+<div class="custom-form">
+  <div class="form-header">
+    <h2 class="form-title">📝 Product Form</h2>
   </div>
+  <%= form_with model: product, html: { class: "unique-form" } do |form| %>
+
+    <!-- Name Field -->
+    <div class="form-group">
+      <label class="form-label" for="name">
+        <i class="icon-user"></i> Product Name
+      </label>
+      <%= form.text_field :name, class: "form-input styled-input", placeholder: "Enter product name" %>
+    </div>
+
+    <!-- Description Field -->
+    <div class="form-group">
+      <label class="form-label" for="description">
+        <i class="icon-description"></i> Product Description
+      </label>
+      <%= form.rich_text_area :description, class: "form-textarea styled-textarea", placeholder: "Provide a detailed description" %>
+    </div>
+
+    <!-- Featured Image Field -->
+    <div class="form-group">
+      <label class="form-label" for="featured_image">
+        <i class="icon-image"></i> Upload Featured Image
+      </label>
+      <%= form.file_field :featured_image, accept: "image/*", class: "form-file styled-file" %>
+    </div>
+
+    <!-- Inventory Count Field -->
+    <div class="form-group">
+      <label class="form-label" for="inventory_count">
+        <i class="icon-count"></i> Inventory Count
+      </label>
+      <%= form.number_field :inventory_count, class: "form-input styled-input", placeholder: "Enter inventory count" %>
+    </div>
+
+    <!-- Submit and Cancel Buttons -->
+    <div class="form-actions">
+      <%= form.submit "Save Product", class: "form-button save-button" %>
+      <%= link_to "Cancel", @product, class: "cancel-link" %>
+    </div>
+
+  <% end %>
 </div>

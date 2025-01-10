@@ -1,35 +1,39 @@
 <div class="custom-container">
-  <div class="custom-box">
-    <div class="custom-layout">
-      <div class="custom-image-wrapper">
-        <% if @product.featured_image.attached? %>
-          <%= image_tag @product.featured_image, class: "custom-image" %>
-        <% end %>
+  <!-- Khung chứa tên sản phẩm -->
+  <div class="custom-title-container">
+    <h1 class="product-title"><%= @product.name %></h1>
+  </div>
+
+  <!-- Khung chứa các thông tin còn lại -->
+  <div class="custom-card">
+    <!-- Phần hình ảnh -->
+    <div class="custom-image-container">
+      <% if @product.featured_image.attached? %>
+        <%= image_tag @product.featured_image, class: "custom-image" %>
+      <% else %>
+        <div class="placeholder-image">No Image</div>
+      <% end %>
+    </div>
+
+    <!-- Phần thông tin sản phẩm -->
+    <div class="custom-product-info">
+      <!-- Mô tả -->
+      <div class="info-section">
+        <h5>Description</h5>
+        <p><%= @product.description %></p>
       </div>
 
-      <div class="custom-details">
-        <h1 class="custom-product-title"><%= @product.name %></h1>
+      <!-- Kho hàng -->
+      <div class="info-section">
+        <h5>Inventory</h5>
+        <p><%= render "inventory", product: @product %></p>
+      </div>
 
-        <div class="custom-info-section">
-          <h5 class="custom-section-title">Description</h5>
-          <p class="custom-description"><%= @product.description %></p>
-        </div>
-
-        <div class="custom-info-section">
-          <h5 class="custom-section-title">Inventory</h5>
-          <p class="custom-inventory"><%= render "inventory", product: @product %></p>
-        </div>
-
-        <div class="custom-buttons">
-          <!-- Nút Edit -->
-          <%= button_to "Edit", edit_product_path(@product), method: :get, class: "custom-button custom-edit-button" %>
-          
-          <!-- Nút Delete -->
-          <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "custom-button custom-delete-button" %>
-
-          <!-- Nút Back, nằm kế bên Nút Delete -->
-          <%= link_to "Back", products_path, class: "custom-button custom-back-button" %>
-        </div>
+      <!-- Các nút thao tác -->
+      <div class="custom-buttons">
+        <%= button_to "Edit", edit_product_path(@product), method: :get, class: "button edit-button" %>
+        <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "button delete-button" %>
+        <%= link_to "Back", products_path, class: "button back-button" %>
       </div>
     </div>
   </div>

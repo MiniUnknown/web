@@ -384,277 +384,268 @@ body {
    /* add,fix,delete nhaaaaaaaaaaaaaa*/
 
    /* Custom Body Styling */
-.custom-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e0f7fa; /* Background nhẹ nhàng, màu xanh dương nhạt */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .form-container {
-    background-color: #ffffff;
-    padding: 30px;
-    max-width: 600px;
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    overflow: hidden; /* Đảm bảo không có sự tràn ngoài */
-  }
-  
-  .form-container:hover {
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-    transform: scale(1.02); /* Nhẹ nhàng phóng to khi hover */
-  }
-  
-  .form-container h2 {
-    text-align: center;
-    color: #00796b;
-    margin-bottom: 25px;
-    font-size: 24px;
-  }
-  
-  /* Form Group Styling */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-label {
-    font-size: 16px;
-    color: #00796b;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  /* Input Fields Styling */
-  .form-input, .form-textarea, .form-file-input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    background-color: #f1f1f1;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .form-input:focus, .form-textarea:focus, .form-file-input:focus {
-    outline: none;
-    border-color: #00796b;
-    background-color: #e0f2f1;
-  }
-  
-  .form-textarea {
-    resize: vertical;
-    min-height: 150px;
-  }
-  
-  /* Submit Button Styling */
-  .form-submit {
-    width: 100%;
-    padding: 12px;
-    background-color: #00796b;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .form-submit:hover {
-    background-color: #004d40;
-    transform: scale(1.05); /* Zoom effect on hover */
-  }
-  
-  .form-submit:active {
-    background-color: #00332f;
-  }
-  
-  /* Cancel Button Styling */
-  .cancel-link {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    text-align: center;
-    font-size: 16px;
-    background-color: #ecf0f1; /* Red color */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .cancel-link:hover {
-    background-color: #2ecc71;
-    transform: scale(1.05);
-  }
-  
-  .cancel-link:focus {
-    outline: none;
-    border: 2px solid #f44336;
-  }
-  
-  .cancel-link:active {
-    background-color: #c62828;
-  }
-  
-  /* Form Actions Section */
-  .form-actions {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .form-container {
-      padding: 20px;
-    }
-  
-    .form-submit {
-      font-size: 16px;
-      padding: 10px;
-    }
-  
-    .cancel-link {
-      font-size: 16px;
-      padding: 10px;
-    }
-  }
+.custom-form {
+  width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f0f9ff, #cbebff);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #004085;
+  text-shadow: 1px 1px 2px #ddd;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input, .form-textarea, .form-file {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.styled-input {
+  background: #ffffff;
+  border: 1px solid #007bff;
+}
+
+.styled-textarea {
+  background: #fffaf0;
+  border: 1px solid #ffc107;
+}
+
+.styled-file {
+  background: #e9faff;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-button {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-button {
+  background: #28a745;
+  color: white;
+}
+
+.save-button:hover {
+  background: #218838;
+}
+
+.cancel-link {
+  padding: 10px 15px;
+  background: #f8d7da;
+  color: #721c24;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cancel-link:hover {
+  background: #f5c6cb;
+}
+
+.icon-user:before {
+  content: "👤";
+}
+
+.icon-description:before {
+  content: "📝";
+}
+
+.icon-image:before {
+  content: "📷";
+}
+
+.icon-count:before {
+  content: "📦";
+}
+
   
 
   /* infomatiom nhaaaaaaaaaaaaaa*/
   /* Tạo kiểu cho container chính */
+/* Thiết lập chung cho toàn bộ trang */
 .custom-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-  }
-  
-  /* Tạo kiểu cho hộp chứa sản phẩm */
-  .custom-box {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  /* Định dạng layout tổng thể */
-  .custom-layout {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  /* Định dạng cho ảnh sản phẩm */
-  .custom-image-wrapper {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .custom-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Định dạng chi tiết sản phẩm */
-  .custom-details {
-    flex: 2;
-  }
-  
-  /* Tiêu đề sản phẩm */
-  .custom-product-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  /* Tạo kiểu cho các phần thông tin (Description, Inventory) */
-  .custom-info-section {
-    border: 1px solid #ddd; /* Thêm viền mờ */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px; /* Bo góc cho khung */
-    background-color: #f9f9f9; /* Màu nền sáng cho khung */
-  }
-  
-  /* Tiêu đề phần thông tin (Description, Inventory) */
-  .custom-section-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Nội dung phần thông tin (Description, Inventory) */
-  .custom-description, .custom-inventory {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  /* Định dạng cho các nút nằm chung 1 hàng ngang */
-  .custom-buttons {
-    display: flex; /* Dùng flexbox để sắp xếp các nút trên 1 hàng */
-    gap: 10px; /* Khoảng cách giữa các nút */
-    margin-top: 20px;
-    justify-content: flex-end; /* Căn các nút về phía bên phải */
-  }
-  
-  /* Định dạng cho các nút */
-  .custom-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .custom-edit-button {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .custom-edit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .custom-delete-button {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .custom-delete-button:hover {
-    background-color: #c82333;
-  }
-  
-  /* Sửa lại kiểu cho nút Back */
-  .custom-back-button {
-    background-color: #28a745; /* Màu nền cho nút Back */
-    color: white;
-    padding: 10px 20px; /* Cùng kích thước padding như các nút khác */
-    font-size: 16px; /* Đảm bảo kích thước chữ giống như các nút khác */
-    font-weight: bold; /* Đảm bảo chữ đậm giống như các nút khác */
-    border-radius: 5px; /* Đảm bảo bo góc giống các nút khác */
-    cursor: pointer; /* Thêm con trỏ khi hover */
-    text-decoration: none; /* Bỏ gạch dưới */
-    transition: background-color 0.3s; /* Hiệu ứng đổi màu nền khi hover */
-  }
-  
-  .custom-back-button:hover {
-    background-color: #218838; /* Màu nền khi hover */
-  }
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa tất cả các phần */
+}
+
+/* Khung chứa tên sản phẩm */
+.custom-title-container {
+  width: 40%; /* Giảm chiều rộng xuống 40% để thanh tiêu đề nhỏ hơn */
+  background-color: #f8f9fa;
+  padding: 8px 12px; /* Padding nhẹ nhàng để thanh tiêu đề giống label */
+  border-radius: 5px; /* Bo góc mềm mại */
+  box-shadow: none; /* Không sử dụng box-shadow để giống label */
+  margin-bottom: 15px; /* Khoảng cách giữa thanh tiêu đề và các phần còn lại */
+  margin-left: auto;
+  margin-right: auto; /* Căn giữa thanh tiêu đề */
+}
+
+/* Tiêu đề sản phẩm (Product Name) */
+.product-title {
+  font-size: 16px;  /* Tăng kích thước chữ lên 16px để tên sản phẩm dễ đọc */
+  font-weight: 600;  /* Đậm chữ nhẹ để tên sản phẩm nổi bật */
+  color: #333;
+  text-align: center;
+  text-transform: uppercase; /* Viết hoa để tạo điểm nhấn */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ */
+}
+
+
+
+
+
+
+/* Khung chứa hình ảnh và thông tin sản phẩm */
+.custom-card {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Phần hình ảnh */
+.custom-image-container {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid #ddd;
+}
+
+.custom-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* Phần thông tin sản phẩm */
+.custom-product-info {
+  width: 60%;
+  padding: 20px;
+}
+
+/* Các phần mô tả và thông tin kho hàng */
+.info-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.info-section h5 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.info-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Các nút thao tác */
+.custom-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Nếu không đủ không gian, các nút sẽ xuống dòng */
+  justify-content: center;
+}
+
+.button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}
+
+.back-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+}
+
+.back-button:hover {
+  background-color: #1976D2;
+}
+
   
 
 
